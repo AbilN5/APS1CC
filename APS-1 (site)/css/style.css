@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-top: 60px;
+    margin-bottom: 200px;
+}
+
+#main-nav {
+    background-color: green;
+    padding: 10px, 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 0;
+    padding: 30px;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+    margin: 0, 50px;
+    padding: 8px, 12px;
+    transition: 0.5s;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+    font-size: 22px;
+}
+
+.footer {
+    background-color: darkgreen;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 30px;
+}
+
+
+.footer-column-title {
+    color: white
+}
+
+.footer-item {
+    color: lightgray;
+}

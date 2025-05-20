@@ -12,7 +12,7 @@
     </head>
 
     <body>
-
+        
         <nav id="main-nav" class="nav">
             <ul class="nav-list">
                 <li class="nav-item" href="index.xhtml">Início</li>
@@ -23,22 +23,27 @@
             </ul>
         </nav>
 
-        <main>
-            <h1 class="page-title">Uso de Softwares em Rotação de Culturas</h1>
+        <div class="parallax-scroll">
+            <div class="overlay"></div>
+        </div>
+        <section class="content">
+            <main>
+                <h1 class="page-title">Uso de Softwares em Rotação de Culturas</h1>
 
-            <div class="topic-block">
-                
-                <h2 class="topic-title">Tópico 1</h2>
-                
-                <div class="image-block">
-                    <img src="?"/>
+                <div class="topic-block">
+                    
+                    <h2 class="topic-title">Tópico 1</h2>
+                    
+                    <div class="image-block">
+                        <img src="?"/>
+                    </div>
+
+                    <p class="topic-paragraph" id="paragraph-1.1">Parágrafo 1.1</p>
+                    <p class="topic-paragraph" id="paragraph-1.2">Parágrafo 1.2</p>
+
                 </div>
-
-                <p class="topic-paragraph" id="paragraph-1.1">Parágrafo 1.1</p>
-                <p class="topic-paragraph" id="paragraph-1.2">Parágrafo 1.2</p>
-
-            </div>
-        </main>
+            </main>
+        </section>
 
         <footer id="main-footer" class="footer">
             
@@ -67,6 +72,15 @@
             </div>
 
         </footer>
+
+        <script>
+            const parallax = document.querySelector('.parallax-scroll');
+
+            window.addEventListener('scroll', () => {
+                let scrollPosition = window.scrollY;
+                parallax.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+            });
+        </script>
     </body>
 
 </html>

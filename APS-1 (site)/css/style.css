@@ -24,7 +24,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(5px);
     z-index: 1;
 }
@@ -37,7 +37,39 @@ body {
     align-items: center;
     color: white;
     text-align: center;
-    margin: 100px 50px;
+    margin: 350px 50px 150px;
+}
+
+.content h1, .content h2, .content h3 {
+    color: rgb(227, 241, 229);
+    text-shadow: 3px 3px 4px rgb(0, 0, 0);
+}
+
+.content h1 {
+    font-size: 40px;
+    
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.content h3 {
+    font-size: 25px;
+}
+
+.content p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 22px;
+    padding-bottom: 12px;
+    color: rgb(215, 238, 218);
+    text-shadow: 3px 3px 4px rgb(0, 0, 0);
+
+}
+
+.content li {
+    padding: 5px;
 }
 
 main {
@@ -47,13 +79,14 @@ main {
 }
 
 #main-nav {
-    background-color: green;
+    background-color: rgb(41, 104, 41);
     padding: 10px, 20px;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 2;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .nav-list {
@@ -86,7 +119,7 @@ main {
 }
 
 .footer {
-    background-color: darkgreen;
+    background-color: rgb(27, 83, 27);
     width: 100%;
     padding: 10px;
     position: relative;

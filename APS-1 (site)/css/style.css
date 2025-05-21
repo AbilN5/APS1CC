@@ -4,12 +4,11 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 .parallax-scroll {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 150%;
     width: 100%;
     background-image: url(../imagens/bg_planeta.jpg);
     background-size: cover;
@@ -38,6 +37,7 @@ body {
     align-items: center;
     color: white;
     text-align: center;
+    margin: 100px 50px;
 }
 
 main {
@@ -81,13 +81,17 @@ main {
     font-size: 22px;
 }
 
+.content .topic-paragraph, .content .paragraph-title {
+    text-align: left;
+}
+
 .footer {
     background-color: darkgreen;
     width: 100%;
     padding: 10px;
-    position: absolute;
-    bottom: -40px;
-    left: 0;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
     display: flex;
     gap: 30px;
     z-index: 2;

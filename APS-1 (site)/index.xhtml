@@ -22,25 +22,58 @@
                 <li class="nav-item" href="#">Sobre os Autores</li>
             </ul>
         </nav>
-
         <div class="parallax-scroll">
-            <div class="overlay"></div>
-        </div>
+                <div class="overlay"></div>
+            </div>
         <section class="content">
             <main>
                 <h1 class="page-title">Uso de Softwares em Rotação de Culturas</h1>
 
                 <div class="topic-block">
                     
-                    <h2 class="topic-title">Tópico 1</h2>
+                    <h2 class="topic-title">Rotação de Culturas</h2>
                     
                     <div class="image-block">
                         <img src="?"/>
                     </div>
 
-                    <p class="topic-paragraph" id="paragraph-1.1">Parágrafo 1.1</p>
-                    <p class="topic-paragraph" id="paragraph-1.2">Parágrafo 1.2</p>
+                    <p class="topic-paragraph" id="paragraph-1.1">        
+                        A rotação de culturas é uma prática agrícola fundamental que consiste em alternar diferentes tipos de culturas em uma mesma área ao longo de diferentes safras. Em vez de plantar sempre a mesma cultura, como soja ou milho, o agricultor alterna com outras, como feijão, sorgo, milheto, ou até mesmo adubos verdes como a crotalária.
+                    </p>
+                    
+                    <h3 class="paragraph-title">
+                        Benefícios da Rotação de Culturas
+                    </h3>
+                    <p class="topic-paragraph" id="paragraph-1.2">
+                        <ul class="paragraph-list">
+                            <li>
+                                Melhoria do solo: Culturas diferentes possuem necessidades e impactos distintos no solo. Ao alterná-las, evita-se o esgotamento de nutrientes específicos e melhora-se a estrutura do solo.
+                            </li>
+                            <li>
+                                Controle de pragas e doenças: Muitas pragas e doenças são específicas de certas culturas. Alternar as espécies dificulta o ciclo de vida desses organismos, reduzindo a necessidade de agrotóxicos.
+                            </li>
+                            <li>
+                                Redução da infestação de plantas daninhas: Culturas com diferentes densidades e padrões de crescimento competem de forma distinta com ervas daninhas, ajudando a controlar sua proliferação.
+                            </li>
+                            <li>
+                                Aumento da produtividade: Solos mais saudáveis e equilibrados tendem a produzir mais, além de reduzir os custos com insumos químicos.
+                            </li>
+                            <li>
+                                Sustentabilidade: A prática contribui para a agricultura sustentável, mantendo a fertilidade do solo e reduzindo o impacto ambiental.
+                            </li>
+                        </ul>
+                    </p>
 
+                    <h3 class="paragraph-title">
+                        Exemplo Prático no Brasil
+                    </h3>
+                    <p class="topic-paragraph" id="paragraph-1.3">
+                        No Cerrado brasileiro, é comum alternar soja no verão com milho safrinha ou braquiária no outono/inverno. A braquiária, por exemplo, atua como adubo verde, protegendo o solo, promovendo a reciclagem de nutrientes e auxiliando no controle de nematoides.                       
+                    </p>
+
+                    <p class="topic-paragraph" id="paragraph-1.4">
+                        Outra prática comum é o uso de leguminosas, como o feijão-guandu ou a mucuna, que fixam nitrogênio no solo, reduzindo a necessidade de fertilizantes nitrogenados.                      
+                    </p>
                 </div>
             </main>
         </section>
@@ -78,7 +111,7 @@
 
             window.addEventListener('scroll', () => {
                 let scrollPosition = window.scrollY;
-                parallax.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+                parallax.style.transform = `translateY(${scrollPosition * -0.5}px)`;
             });
         </script>
     </body>

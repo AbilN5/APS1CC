@@ -1,128 +1,377 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html 
-    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
-    
-    <head>
-        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-        <title>APS 1 - Uso de softwares em rotação de culturas</title>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/home.css"/>
-    </head>
 
-    <body>
-        
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>APS 1 - Uso de softwares em rotação de culturas</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/simujavasript.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>APS - Uso de Sistemas de Software para melhoramento de Rotação de Plantio</h1>
+
+            <p>Sustentabilidade na Rotação de Cultura</p>
+        </header>
+
         <nav id="main-nav" class="nav">
             <ul class="nav-list">
-                <li class="nav-item" href="index.xhtml">Início</li>
-                <li class="nav-item" href="#">Entenda a APS</li>
-                <li class="nav-item" href="#">Rotação de Plantio</li>
-                <li class="nav-item" href="#">Integração com Softwares</li>
-                <li class="nav-item" href="#">Sobre os Autores</li>
+                <li class="nav-item"> <a href="index.xhtml">Início</a></li>
+                <li class="nav-item"> <a href="#rotacao">Rotação de Plantio</a></li>
+                <li class="nav-item"> <a href="#software">Softwares</a></li>
+                <li class="nav-item"> <a href="#dissertacao">Dissertação</a></li>
+                <li class="nav-item" id="simu">Simulador</li>
+                <li class="nav-item"> <a href="#autores">Sobre os Autores</a></li>
             </ul>
+
         </nav>
-        <div class="parallax-scroll">
-                <div class="overlay"></div>
+
+        <div id="simulador-overlay">   
+            <div id="simulador-container">
+                <h2>Simulador de Economia de Recursos Naturais</h2>
+                <form id="formSimulador">
+                    <div id="opcaoSimulador">
+                        <div>
+                            <label for="cultura">Tipo de Cultura:</label>
+                            <br/>
+                            <select id="cultura"> 
+                                <option value="">Selecione</option>
+                                <option value="soja">Soja</option>
+                                <option value="milho">Milho</option>
+                                <option value="trigo">Trigo</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="solo">Tipo de Solo:</label>
+                            <br/>
+                            <select id="solo"> 
+                                <option value="">Selecione</option>
+                                <option value="arenoso">Arenoso</option>
+                                <option value="argiloso">Argiloso</option>
+                                <option value="siltoso">Siltoso</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="regiao">Região:</label>
+                            <br/>
+                            <select id="regiao"> 
+                                <option value="">Selecione</option>
+                                <option value="norte">Norte</option>
+                                <option value="nordeste">Nordeste</option>
+                                <option value="sul">Sul</option>
+                                <option value="sudeste">Sudeste</option>
+                                <option value="centro-oeste">Centro-Oeste</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="containerResultado">
+                        <p id="resultado"></p> <br/>
+                        <button type="submit">Calcular Economia</button>
+                    </div>    
+                </form>
+                <button id="fecharSimulador">X</button>
             </div>
+        </div>
+
+
+        <div class="parallax-scroll">
+
+            <div class="overlay"></div>
+        </div>
+        <section class="banner">
+            <div class="container">
+                <h1>Tecnologia e sustentabilidade</h1>
+            </div>
+        </section>
         <section class="content">
+
             <main>
                 <h1 class="page-title">Uso de Softwares em Rotação de Culturas</h1>
 
                 <div class="topic-block">
-                    
+
                     <h2 class="topic-title">Rotação de Culturas</h2>
-                    
 
-                    
 
-                    <p class="topic-paragraph" id="paragraph-1.1">  
-                        
-                        <div class="image-block">
-                            <img src="imagens/img_rotacao_cultura.png" id="img_home_rotacao_cultura"/>
-                            <div class="image-caption">
-                                Plantar culturas diferentes "ensina" o solo a manter seu equilíbrio natural de nutrientes e micro-organismos.
-                            </div>
+
+
+                    <p class="topic-paragraph" id="paragraph-1.1">
+
+                    <div class="image-block">
+                        <img src="imagens/img_rotacao_cultura.png" id="img_home_rotacao_cultura" />
+                        <div class="image-caption">
+                            Plantar culturas diferentes "ensina" o solo a manter seu equilíbrio natural de nutrientes e
+                            micro-organismos.
                         </div>
-                        <div>
-                        A rotação de culturas é uma prática agrícola fundamental que consiste em alternar diferentes tipos de culturas em uma mesma área ao longo de diferentes safras. Em vez de plantar sempre a mesma cultura, como soja ou milho, o agricultor alterna com outras, como feijão, sorgo, milheto, ou até mesmo adubos verdes como a crotalária.
-                        </div>
+                    </div>
+                    <div>A agricultura contemporânea passa por uma profunda transformação impulsionada pela necessidade
+                        de
+                        aumentar a produtividade, reduzir os impactos ambientais e garantir a sustentabilidade dos
+                        sistemas
+                        agrícolas. Nesse contexto, a rotação de plantio destaca-se como uma prática fundamental para
+                        preservar a fertilidade do solo, controlar pragas e doenças, além de reduzir a degradação
+                        ambiental.
+
+                        Contudo, a complexidade envolvida no planejamento de sistemas de rotação eficientes torna
+                        essencial
+                        o uso de tecnologias avançadas, especialmente os softwares agrícolas, que surgem como
+                        ferramentas
+                        indispensáveis no auxílio ao planejamento, monitoramento e avaliação de sistemas de rotação de
+                        culturas.
+
+                    </div>
+
                     </p>
-                    
+
                     <h3 class="paragraph-title">
-                        Benefícios da Rotação de Culturas
+                    <a name="rotacao">Benefícios da Rotação de Culturas </a>
                     </h3>
                     <p class="topic-paragraph" id="paragraph-1.2">
-                        <ul class="paragraph-list">
-                            <li>
-                                Melhoria do solo: Culturas diferentes possuem necessidades e impactos distintos no solo. Ao alterná-las, evita-se o esgotamento de nutrientes específicos e melhora-se a estrutura do solo.
-                            </li>
-                            <li>
-                                Controle de pragas e doenças: Muitas pragas e doenças são específicas de certas culturas. Alternar as espécies dificulta o ciclo de vida desses organismos, reduzindo a necessidade de agrotóxicos.
-                            </li>
-                            <li>
-                                Redução da infestação de plantas daninhas: Culturas com diferentes densidades e padrões de crescimento competem de forma distinta com ervas daninhas, ajudando a controlar sua proliferação.
-                            </li>
-                            <li>
-                                Aumento da produtividade: Solos mais saudáveis e equilibrados tendem a produzir mais, além de reduzir os custos com insumos químicos.
-                            </li>
-                            <li>
-                                Sustentabilidade: A prática contribui para a agricultura sustentável, mantendo a fertilidade do solo e reduzindo o impacto ambiental.
-                            </li>
-                        </ul>
+                    <ul class="paragraph-list">
+                        <li>
+                            Melhoria do solo: Culturas diferentes possuem necessidades e impactos distintos no solo. Ao
+                            alterná-las, evita-se o esgotamento de nutrientes específicos e melhora-se a estrutura do
+                            solo.
+                        </li>
+                        <li>
+                            Controle de pragas e doenças: Muitas pragas e doenças são específicas de certas culturas.
+                            Alternar as espécies dificulta o ciclo de vida desses organismos, reduzindo a necessidade de
+                            agrotóxicos.
+                        </li>
+                        <li>
+                            Redução da infestação de plantas daninhas: Culturas com diferentes densidades e padrões de
+                            crescimento competem de forma distinta com ervas daninhas, ajudando a controlar sua
+                            proliferação.
+                        </li>
+                        <li>
+                            Aumento da produtividade: Solos mais saudáveis e equilibrados tendem a produzir mais, além
+                            de
+                            reduzir os custos com insumos químicos.
+                        </li>
+                        <li>
+                            Sustentabilidade: A prática contribui para a agricultura sustentável, mantendo a fertilidade
+                            do
+                            solo e reduzindo o impacto ambiental.
+                        </li>
+                    </ul>
                     </p>
 
                     <h3 class="paragraph-title">
-                        Exemplo Prático no Brasil
+                        Conceitos Fundamentais: Rotação de Plantio e Sustentabilidade.
                     </h3>
                     <p class="topic-paragraph" id="paragraph-1.3">
-                        No Cerrado brasileiro, é comum alternar soja no verão com milho safrinha ou braquiária no outono/inverno. A braquiária, por exemplo, atua como adubo verde, protegendo o solo, promovendo a reciclagem de nutrientes e auxiliando no controle de nematoides.                       
+                        A rotação de plantio consiste na alternância planejada de diferentes culturas em uma mesma área
+                        agrícola ao longo de períodos específicos. Essa prática visa quebrar ciclos de pragas e doenças,
+                        melhorar a estrutura e fertilidade do solo, reduzir a dependência de insumos químicos e aumentar
+                        a
+                        produtividade a longo prazo.
                     </p>
 
                     <p class="topic-paragraph" id="paragraph-1.4">
-                        Outra prática comum é o uso de leguminosas, como o feijão-guandu ou a mucuna, que fixam nitrogênio no solo, reduzindo a necessidade de fertilizantes nitrogenados.                      
+                        A sustentabilidade agrícola envolve a adoção de práticas que garantam a produção de alimentos,
+                        fibras e energia sem comprometer os recursos naturais. A rotação de plantio é considerada uma
+                        das
+                        práticas essenciais para esse objetivo, sendo potencializada pelo uso de tecnologias digitais.
                     </p>
+                    <h3 class="paragraph-title">
+                        O Papel dos Softwares no Melhoramento da Rotação de Plantio
+                    </h3>
+                    <p class="topic-paragraph" id="paragraph-1.5">
+
+                        Softwares agrícolas realizam planejamento estratégico da rotação de culturas com base em
+                        características do solo, clima, demanda de mercado e disponibilidade de insumos, sugerindo
+                        sequências ideais de culturas.
+                        Por meio de modelos matemáticos, os softwares simulam o comportamento do solo, produtividade das
+                        culturas e impacto das práticas agrícolas ao longo do tempo. Exemplos incluem o DSSAT e o APSIM.
+                        Sensores, drones e imagens de satélite permitem o monitoramento contínuo das lavouras,
+                        possibilitando ajustes dinâmicos na rotação conforme as condições do solo e clima.
+                        Softwares oferecem gestão integrada, permitindo avaliar a sustentabilidade das práticas
+                        adotadas,
+                        considerando indicadores como pegada de carbono e eficiência no uso de nutrientes.
+                    </p>
+                    <h3 class="paragraph-title">
+                       <a name="software"> Exemplos de Softwares para Rotação de Plantio</a>
+                    </h3>
+                    <p class="topic-paragraph" id="paragraph-1.6">
+                    <ul class="paragraph-list">
+                        <li>
+                            <strong>Climate FieldView</strong>: Plataforma que integra dados coletados em campo com
+                            imagens
+                            de satélite, permitindo análises detalhadas sobre produtividade e condições do solo.
+                        </li>
+                        <li>
+                            <strong>ACropSim e DSSAT</strong>: Modelos usados para simular cenários de produção agrícola
+                            e
+                            avaliar os efeitos de diferentes práticas de manejo, incluindo rotação de culturas.
+                        </li>
+                        <li>
+                            <strong>AgroCAD e Agrosmart</strong>: Plataformas que oferecem suporte ao planejamento da
+                            rotação, gestão de irrigação e análise de riscos climáticos. O Agrosmart utiliza IA para
+                            recomendar práticas sustentáveis.
+                        </li>
+                        <li>
+                            <strong>Precision Planting</strong>: Tecnologia de precisão que permite ajustar o plantio
+                            conforme características específicas de cada área, otimizando a introdução de culturas na
+                            rotação.
+                        </li>
+                    </ul>
+                    </p>
+
+                    <p class="topic-paragraph" id="paragraph-1.7">
+                        O uso de softwares para o melhoramento da rotação de plantio representa uma inovação
+                        significativa
+                        na agricultura sustentável. Essas ferramentas potencializam benefícios agronômicos, econômicos e
+                        ambientais, promovendo uma gestão agrícola mais eficiente e resiliente. O futuro aponta para uma
+                        intensificação do uso de softwares agrícolas integrados com inteligência artificial, big data,
+                        blockchain e práticas regenerativas. A democratização do acesso e a capacitação dos produtores
+                        são
+                        tendências fundamentais.
+                        A superação dos desafios depende de políticas públicas, investimentos em pesquisa e capacitação,
+                        consolidando um modelo agrícola sustentável para o futuro
+                    </p>
+
+                    <h3 class="paragraph-title">
+                        Desafios e limitações
+                    </h3>
+                    <p class="topic-paragraph" id="paragraph-1.8">
+                    <ul class="paragraph-list">
+                        <li>
+                            <strong>Acesso à Tecnologia</strong>: Um dos principais desafios é o acesso limitado às
+                            tecnologias digitais, especialmente por pequenos e médios produtores. Muitas ferramentas de
+                            software exigem investimentos significativos em equipamentos, como sensores, drones e
+                            computadores, além de conexões estáveis de internet — infraestrutura que ainda é precária em
+                            diversas regiões agrícolas, principalmente em países em desenvolvimento.
+                        </li>
+                        <li>
+                            <strong>Capacitação Técnica</strong>: O uso eficiente dos softwares agrícolas requer
+                            capacitação
+                            técnica específica. Muitos produtores não possuem familiaridade com as tecnologias digitais,
+                            o
+                            que limita a adoção ou resulta em uso inadequado das ferramentas. A ausência de programas
+                            contínuos de treinamento e extensão rural dificulta a democratização e o aproveitamento
+                            pleno
+                            dos recursos tecnológicos.
+                        </li>
+                        <li>
+                            <strong>Qualidade e Disponibilidade de Dados</strong>: Para que os softwares forneçam
+                            análises e
+                            recomendações precisas, é essencial dispor de dados de alta qualidade sobre o solo, clima,
+                            histórico de cultivos, entre outros. A escassez ou inconsistência dessas informações
+                            compromete
+                            a eficácia das soluções digitais, levando a resultados imprecisos ou inadequados para o
+                            planejamento da rotação.
+                        </li>
+                        <li>
+                            <strong>Complexidade dos Modelos</strong>:Os modelos matemáticos e algoritmos utilizados por
+                            muitos softwares são altamente complexos, levando em conta inúmeras variáveis ambientais,
+                            biológicas e econômicas. Essa complexidade pode dificultar a interpretação dos resultados
+                            pelos
+                            produtores e técnicos, além de gerar resistência quanto à confiança nas recomendações
+                            automatizadas.
+                        </li>
+                        <li>
+                            <strong>Custo de Implementação e Manutenção</strong>:A aquisição de licenças de softwares
+                            especializados, bem como os custos associados à instalação, atualização e manutenção de
+                            equipamentos, podem ser elevados. Isso cria uma barreira econômica para agricultores de
+                            menor
+                            porte e limita a adoção em larga escala.
+                        </li>
+                        <li>
+                            <strong>Questões Éticas e de Privacidade</strong>:O uso de softwares agrícolas envolve a
+                            coleta
+                            massiva de dados sobre propriedades rurais e práticas produtivas, levantando preocupações
+                            sobre
+                            a privacidade das informações e o controle sobre os dados. A ausência de regulamentações
+                            claras
+                            sobre o uso e a propriedade desses dados pode gerar desconfiança entre os produtores.
+                        </li>
+                        <li>
+                            <strong>Integração entre Sistemas</strong>:Nem sempre os diferentes softwares e plataformas
+                            utilizadas na gestão agrícola são compatíveis entre si, dificultando a integração de dados e
+                            a
+                            construção de sistemas de gestão integrados e eficientes. A falta de padrões abertos e
+                            interoperabilidade é um obstáculo importante.
+                        </li>
+                    </ul>
+                    </p>
+                <h3 class="paragraph-title">
+                    <a name="dissertacao"> Dissertação </a> 
+                    </h3>
+                <p class="topic-paragraph" id="paragraph-1.9">
+                    Hortaliças da mesma família botânica são frequentemente suscetíveis às mesmas doenças e insetos. Muitos organismos prejudiciais à saúde são transmitidos pelo solo e podem persistir nele por vários anos. Segundo o site “Nutrição de Safras”, ao rotacionar suas hortaliças, permite a quebra dos ciclos biológicos de patógenos e pragas, que muitas vezes se especializam em culturas específicas. Ao variar as espécies cultivadas, reduz-se significativamente a pressão dessas ameaças, diminuindo, consequentemente, a necessidade do uso de defensivos químicos.
+
+Vale constar também que hortaliças da mesma família botânica tendem a utilizar o mesmo tipo e a mesma quantidade de nutrientes do solo. Por exemplo, membros da família das cabaças (Cucurbitaceae) tendem a utilizar muito nitrogênio do solo, enquanto membros da família das cebolas (Amaryllidaceae) tendem a utilizar uma porcentagem maior de potássio do que outras plantas. Alternativamente, membros da família das leguminosas (Fabaceae) podem ajudar a adicionar nitrogênio ao solo. Ao rotacionar as culturas plantadas na área, você pode equilibrar a perda de diferentes nutrientes e dar tempo para que eles se reponham.
+                </p>
+                <p class="topic-paragraph" id="paragraph-1.10">
+                    Outro aspecto relevante destacado é o papel das plantas de cobertura, que são frequentemente inseridas nos sistemas de rotação. De acordo com o site da “Iowa State University Extension”, as plantas de cobertura são fundamentais, especialmente em hortas caseiras e pequenas propriedades. Elas promovem a retenção de nutrientes, a proteção contra erosão, o aumento da matéria orgânica do solo e até mesmo o controle de plantas daninhas. Espécies como centeio, ervilhaca e trevo são exemplos comuns que, além de protegerem o solo durante períodos de entressafra, também enriquecem o ambiente com nitrogênio e outros nutrientes.
+Várias ervas daninhas comuns dentro e ao redor de hortas pertencem a algumas das mesmas famílias de plantas que os vegetais em sua horta. Isso significa que elas podem servir como hospedeiras alternativas para pragas e insetos. Esta é uma das razões pelas quais um bom controle de ervas daninhas é importante.
+                </p>
+                <p class="topic-paragraph" id="paragraph-1.11">
+                    A escolha adequada das culturas na rotação deve considerar fatores como o tipo de solo, o clima, as demandas nutricionais das plantas e o histórico produtivo da área. Uma sequência bem planejada pode incluir, por exemplo, uma cultura de grãos, seguida por uma leguminosa que fixa nitrogênio, e posteriormente uma cultura que atue como planta de cobertura, promovendo o descanso produtivo e a recuperação do solo.
+
+Além dos benefícios agronômicos, a rotação de culturas também tem impactos econômicos positivos. Reduzir o uso de insumos químicos, melhorar a eficiência dos recursos naturais e aumentar a resiliência do sistema produtivo são fatores que, ao longo prazo, elevam a rentabilidade e reduzem os riscos enfrentados pelos produtores.
+Nesse cenário, a evolução da tecnologia no setor agrícola tem desempenhado um papel fundamental, facilitando a implementação dessa prática. Um exemplo é o sensoriamento remoto onde se usa drones e imagens de satélite para monitorar o solo e a vegetação em tempo real, trazendo benefícios como: 
+                    </p>
+                 <p>  <ul class="paragraph-list">
+                        <li>Identificação de áreas degradadas: Permite ajustar o manejo antes que haja impacto na produtividade.</li>
+                        <li>Mapeamento da fertilidade do solo: Aauxilia na escolha das culturas mais adequadas para cada espaço.</li>
+                        <li> Monitoramento de pragas e doenças no plantio: Possibilita tomadas de descisões acertivas e preventivas.                   </li>
+                    </ul>
+                </p>
+                    <p class="topic-paragraph" id="paragraph-1.12">
+                        Por meio do sensoriamento remoto e das técnicas de agricultura de precisão, os produtores conseguem tomar decisões mais assertivas, baseadas em dados e análises avançadas, o que otimiza a rotação de culturas, aumenta a eficiência produtiva e eleva a rentabilidade dos sistemas agrícolas. Apesar dos inúmeros benefícios proporcionados, sua implementação ainda enfrenta barreiras como a dificuldade na escolha das culturas, questões logísticas, limitações financeiras e resistência a mudanças que fazem com que muitos produtores relutem em incorporar essa prática em seus sistemas produtivos.
+                </p>
+               <p class="topic-paragraph" id="paragraph-1.13"> Diante dos desafios atuais, como a degradação dos solos, as mudanças climáticas e a crescente pressão por uma produção agrícola mais sustentável, a rotação de culturas se apresenta não apenas como uma alternativa, mas como uma necessidade para garantir a segurança alimentar e a preservação dos recursos naturais. 
+Para os profissionais do setor agrícola, adotar a rotação de culturas vai além da busca por produtividade, trata-se de uma estratégia essencial para construir sistemas mais resistentes, eficientes e sustentáveis a longo prazo. Portanto é fundamental superar desafios como a falta de conhecimento técnico, barreiras culturais e limitações econômicas. É essencial que os produtores busquem capacitação e apoio técnico, adotem tecnologias que facilitem o manejo e planejem estrategicamente suas safras. Da mesma forma, as políticas públicas devem desempenhar um papel ativo, oferecendo incentivos financeiros, investimentos em pesquisa, extensão rural e educação, além de promover mercados que valorizem práticas agrícolas sustentáveis. Assim, se aplicadas corretamente as recomendações associadas a essa prática, os produtores conseguirão potencializar seus resultados, promovendo uma produção de grãos mais sustentável, economicamente viável e ambientalmente responsável.
+                </p>
+                 <p class="topic-paragraph" id="paragraph-1.14">
+                    A importância da rotação de culturas é, acima de tudo, compreender que a sustentabilidade na agricultura não é mais uma opção, mas uma necessidade urgente diante dos desafios que o mundo enfrenta. A crescente degradação dos solos, as mudanças climáticas, a perda de biodiversidade e a pressão por aumento da produção de alimentos colocam a agricultura no centro das discussões sobre o futuro do planeta.
+Nesse contexto, a rotação de culturas surge como uma prática que conecta o conhecimento tradicional à inovação tecnológica, oferecendo soluções eficazes, tanto do ponto de vista ambiental quanto econômico. Ao diversificar o cultivo, os produtores não apenas cuidam do solo, mas também constroem sistemas produtivos mais firmes, preparados para enfrentar crises e oscilações do mercado e do clima
+                 </p>
+                 <p class="topic-paragraph" id="paragraph-1.15">
+                    O uso crescente de tecnologias como drones, sensores, inteligência artificial e análise de dados se torna um grande aliado nesse processo, permitindo que até mesmo pequenos produtores acessem informações precisas sobre seu solo, suas plantas e as melhores estratégias para planejar suas safras.
+Portanto, mais do que uma técnica agrícola, a rotação de culturas representa um caminho para repensarmos a relação entre produção e meio ambiente. Ela nos convida a olhar para a terra não apenas como fonte de recursos, mas como um ecossistema vivo que precisa ser cuidado e respeitado. É, sem dúvidas, uma prática capaz de transformar a agricultura atual, tornando-a mais equilibrada e comprometida com as gerações presentes e futuras
+                 </p>
+            
                 </div>
+        
             </main>
         </section>
 
         <footer id="main-footer" class="footer">
+
+            <div class="footer-column">
+
+                <h2 class="footer-column-title"> 
+                  <a name="autores">  Autores</a>
+                </h2>
+                <ul class="footer-list">
+                    <li class="footer-item">ALICE SIMÕES – H695GF2</li>
+                    <li class="footer-item">ALICIA FLORIANO – H65GF2</li>
+                    <li class="footer-item">ARTHUR TOKUYUKI NAKAZO DE SOUZA – R871576</li>
+                    <li class="footer-item">LETICIA DA SILVA TEIXEIRA – H74GEE7</li>
+                    <li class="footer-item">LUCAS DA SILVA TEIXEIRA – R845CE0</li>
+                    <li class="footer-item">VALESKA FERNANDA ANDRADE – H719AE7</li>
+                </ul>
+            </div>
             
-            <div class="footer-column">
-                
-                <h2 class="footer-column-title">Coluna 1</h2>
-                <ul class="footer-list">
-                    <li class="footer-item">Item 1</li>
-                    <li class="footer-item">Item 2</li>
-                    <li class="footer-item">Item 3</li>
-                    <li class="footer-item">Item 4</li>
-                </ul>
-
-            </div>
-
-            <div class="footer-column">
-                
-                <h2 class="footer-column-title">Coluna 2</h2>
-                <ul class="footer-list">
-                    <li class="footer-item">Item 1</li>
-                    <li class="footer-item">Item 2</li>
-                    <li class="footer-item">Item 3</li>
-                    <li class="footer-item">Item 4</li>
-                </ul>
-
-            </div>
-
         </footer>
+    </div>
+    <script>
+        const parallax = document.querySelector('.parallax-scroll');
 
-        <script>
-            const parallax = document.querySelector('.parallax-scroll');
-
-            window.addEventListener('scroll', () => {
-                let scrollPosition = window.scrollY;
-                parallax.style.transform = `translateY(${scrollPosition * -0.5}px)`;
-            });
-        </script>
-    </body>
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY;
+            parallax.style.transform = `translateY(${scrollPosition * -0.5}px)`;
+        });
+    </script>
+</body>
 
 </html>
